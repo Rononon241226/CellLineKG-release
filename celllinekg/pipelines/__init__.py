@@ -1,0 +1,2 @@
+"""Pipeline entrypoints for CellLineKG."""
+

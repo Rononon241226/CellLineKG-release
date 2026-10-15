@@ -1,0 +1,66 @@
+{
+  "inputs": {
+    "reconciliation_clean": "outputs\\integration\\cellline_reconciliation\\cell_line_reconciliation_clean.csv",
+    "cellosaurus_nodes": "outputs\\schema\\cellosaurus\\nodes_cellline.csv",
+    "cellosaurus_source": "outputs\\cellosaurus\\cell_lines.csv",
+    "cellosaurus_schema_dir": "outputs\\schema\\cellosaurus",
+    "depmap_schema_dir": "outputs\\schema\\depmap",
+    "gdsc_schema_dir": "outputs\\schema\\gdsc",
+    "cell_model_passport_schema_dir": "outputs\\schema\\cell_model_passport"
+  },
+  "output_dir": "outputs\\analysis_graph_unified",
+  "selection_rule": "human Cellosaurus Cancer cell lines present in at least one real downstream dataset; clean reconciliation only; exclude DepMap Non-Cancerous disease labels",
+  "selected_cellline_count": 1780,
+  "source_coverage": {
+    "by_source": {
+      "depmap": 1780,
+      "gdsc": 929,
+      "cell_model_passport": 932
+    },
+    "by_source_combination": {
+      "DepMap": 848,
+      "DepMap + CellModelPassport": 3,
+      "DepMap + GDSC + CellModelPassport": 929
+    }
+  },
+  "counts": {
+    "nodes": {
+      "nodes_cellline": 1780,
+      "nodes_disease": 89,
+      "nodes_subtype": 191,
+      "nodes_lineage": 29,
+      "nodes_media": 153,
+      "nodes_gene": 21423,
+      "nodes_variant": 709184,
+      "nodes_copy_number": 514306,
+      "nodes_dependency": 569500,
+      "nodes_gene_expression": 697653,
+      "nodes_drug": 256,
+      "nodes_drug_screen": 205623,
+      "nodes_protein": 8271,
+      "nodes_protein_abundance": 218345
+    },
+    "edges": {
+      "edges_cellline_has_disease": 1780,
+      "edges_cellline_has_subtype": 1780,
+      "edges_cellline_has_lineage": 1780,
+      "edges_cellline_cultures_in": 1498,
+      "edges_subtype_of": 191,
+      "edges_disease_part_of": 90,
+      "edges_cellline_has_variant": 709184,
+      "edges_variant_in_gene": 709184,
+      "edges_cellline_has_copy_number": 514306,
+      "edges_copy_number_target_gene": 514306,
+      "edges_cellline_has_dependency": 569500,
+      "edges_dependency_target_gene": 569500,
+      "edges_cellline_has_expression": 697653,
+      "edges_expression_measured_gene": 697653,
+      "edges_cellline_has_drug_screen": 205623,
+      "edges_drug_screen_tested_drug": 205623,
+      "edges_cellline_has_protein_abundance": 218345,
+      "edges_protein_abundance_measured_protein": 218345,
+      "edges_protein_encoded_by_gene": 8243,
+      "edges_drug_targets_protein": 194
+    }
+  }
+}

@@ -1,0 +1,11 @@
+tool_round_limits:
+  single: 10
+  multi: 20
+  evidence_path: 20
+
+python_timeout_seconds: 60
+
+retrieval_token_limits:
+  single: 20000
+  multi: 130000
+  evidence_path: 130000
